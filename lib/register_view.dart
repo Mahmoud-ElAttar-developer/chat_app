@@ -1,4 +1,3 @@
-import 'package:chat_app/chat_view.dart';
 import 'package:chat_app/login_view.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +30,8 @@ class _RegisterViewState extends State<RegisterView> {
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(height: 20),
+
+                  // name-----------------------------------------------------------
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -46,30 +47,11 @@ class _RegisterViewState extends State<RegisterView> {
                         'Name',
                         style: TextStyle(color: Colors.black),
                       ),
-                      prefixIcon: Icon(Icons.person, color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                      ),
-
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
-
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
                     ),
                   ),
                   SizedBox(height: 20),
-                  SizedBox(height: 20),
+
+                  // email-----------------------------------------------------------
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -85,29 +67,11 @@ class _RegisterViewState extends State<RegisterView> {
                         'Email',
                         style: TextStyle(color: Colors.black),
                       ),
-                      prefixIcon: Icon(Icons.email, color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                      ),
-
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
-
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
                     ),
                   ),
                   SizedBox(height: 20),
+
+                  // password-----------------------------------------------------------
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -136,25 +100,6 @@ class _RegisterViewState extends State<RegisterView> {
                           color: Colors.black,
                         ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                      ),
-
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
-
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -171,7 +116,9 @@ class _RegisterViewState extends State<RegisterView> {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (context) => ChatView()),
+                            MaterialPageRoute(
+                              builder: (context) => LoginView(),
+                            ),
                           );
                         }
                       },
