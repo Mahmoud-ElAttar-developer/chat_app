@@ -1,5 +1,6 @@
 import 'package:chat_app/user_model.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class ChatView extends StatelessWidget {
   const ChatView({super.key});
@@ -134,7 +135,7 @@ class ChatView extends StatelessWidget {
                         radius: 30,
                         backgroundImage: AssetImage(users[index].image),
                       ),
-                      SizedBox(height: 10),
+                      Gap(20),
                       Text(
                         users[index].name,
                         style: TextStyle(color: Colors.white),
@@ -143,13 +144,15 @@ class ChatView extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return SizedBox(width: 10);
+                  return SizedBox(
+                    width: 20,
+                  );
                 },
                 itemCount: users.length,
               ),
             ),
           ),
-          SizedBox(height: 10),
+          Gap(20),
           Expanded(
             child: Container(
               padding: EdgeInsets.all(15),
@@ -208,7 +211,7 @@ class ChatView extends StatelessWidget {
                             //     maintainState: true,     // مطلوبة لتفعيل maintainSize
                             //     child: Column(           // نضع العناصر المراد إخفاؤها هنا
                             //       children: [
-                            //         SizedBox(height: 10),
+                            //         Gap(20),(height: 10),
                             //         Badge.count(
                             //           count: badgeCount,
                             //           backgroundColor: Colors.green,
@@ -224,7 +227,7 @@ class ChatView extends StatelessWidget {
                                   : 0.0, // لو صفر يبقى شفاف تماماً
                               child: Column(
                                 children: [
-                                  SizedBox(height: 10),
+                                  Gap(20),
                                   Badge.count(
                                     count: badgeCount,
                                     backgroundColor: Colors.green,
@@ -240,7 +243,7 @@ class ChatView extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return SizedBox(height: 10);
+                  return Gap(20);
                 },
                 itemCount: users.length,
               ),

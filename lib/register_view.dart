@@ -1,5 +1,6 @@
 import 'package:chat_app/login_view.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
@@ -24,12 +25,12 @@ class _RegisterViewState extends State<RegisterView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/2025-01-01-1735733506.webp', height: 200),
-                  SizedBox(height: 20),
+                  Gap(20),
                   Text(
                     'Create your account',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
 
                   // name-----------------------------------------------------------
                   TextFormField(
@@ -49,7 +50,7 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
 
                   // email-----------------------------------------------------------
                   TextFormField(
@@ -69,7 +70,7 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
 
                   // password-----------------------------------------------------------
                   TextFormField(
@@ -102,9 +103,9 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
 
-                  SizedBox(
+                 SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(

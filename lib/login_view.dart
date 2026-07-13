@@ -1,6 +1,7 @@
 import 'package:chat_app/chat_view.dart';
 import 'package:chat_app/register_view.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -25,12 +26,14 @@ class _LoginViewState extends State<LoginView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/516870-454544.webp', height: 200),
-                  SizedBox(height: 20),
+                  Gap(20),
+                  
                   Text(
                     'Login to your account',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
+                  
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -68,7 +71,8 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
+                  
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -118,8 +122,10 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Gap(20),
+                  
 
+                  
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
