@@ -27,13 +27,13 @@ class _LoginViewState extends State<LoginView> {
                 children: [
                   Image.asset('assets/516870-454544.webp', height: 200),
                   Gap(20),
-                  
+
                   Text(
                     'Login to your account',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
                   Gap(20),
-                  
+
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -49,30 +49,10 @@ class _LoginViewState extends State<LoginView> {
                         'Email',
                         style: TextStyle(color: Colors.black),
                       ),
-                      prefixIcon: Icon(Icons.email, color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                      ),
-
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
-
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
                     ),
                   ),
                   Gap(20),
-                  
+
                   TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -101,31 +81,10 @@ class _LoginViewState extends State<LoginView> {
                           color: Colors.black,
                         ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0xff4732ff)),
-                      ),
-
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
-
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.red),
-                      ),
                     ),
                   ),
                   Gap(20),
-                  
 
-                  
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
