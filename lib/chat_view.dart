@@ -14,6 +14,7 @@ class ChatView extends StatelessWidget {
         lasMsg: 'hello',
         time: '10:02 am',
         count: '6',
+        
       ),
       UserModel(
         image: 'assets/IMG_20151010_094816.jpg',
@@ -194,37 +195,19 @@ class ChatView extends StatelessWidget {
                         ),
                         trailing: Column(
                           mainAxisAlignment: MainAxisAlignment
-                              .center, // عشان ييجوا في نص الـ ListTile بالطول
+                              .center, 
                           crossAxisAlignment: CrossAxisAlignment
-                              .end, // عشان ييجوا على اليمين تحت بعض بالظبط
+                              .end,
 
                           children: [
                             Text(
                               users[index].time,
                               style: TextStyle(color: Colors.black),
                             ),
-                            // نستخدم Visibility بدلاً من if للتحكم في المساحة
-                            //   Visibility(
-                            //     visible: badgeCount > 0, // يظهر فقط لو أكبر من صفر
-                            //     maintainSize: true,      // أهم خاصية: تحجز المساحة حتى لو مختفي
-                            //     maintainAnimation: true, // مطلوبة لتفعيل maintainSize
-                            //     maintainState: true,     // مطلوبة لتفعيل maintainSize
-                            //     child: Column(           // نضع العناصر المراد إخفاؤها هنا
-                            //       children: [
-                            //         Gap(20),(height: 10),
-                            //         Badge.count(
-                            //           count: badgeCount,
-                            //           backgroundColor: Colors.green,
-                            //         ),
-                            //       ],
-                            //     ),
-                            //   ),
-                            // ],
-                            // حل بديل وبسيط جداً بنفس النتيجة
                             Opacity(
                               opacity: badgeCount > 0
                                   ? 1.0
-                                  : 0.0, // لو صفر يبقى شفاف تماماً
+                                  : 0.0, 
                               child: Column(
                                 children: [
                                   Gap(20),
