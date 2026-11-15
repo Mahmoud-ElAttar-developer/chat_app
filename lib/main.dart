@@ -32,7 +32,7 @@ class MainApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide(color: Colors.red),
           ),
-        ), // إغلاق inputDecorationTheme
+        ),
       ),
     );
   }
